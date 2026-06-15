@@ -1,0 +1,109 @@
+
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(
+        180deg,
+        #020b18,
+        #071d36,
+        #0a2f4f
+    );
+    color:white;
+}
+header{
+    height:80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 60px;
+    background:#020b18;
+    border-bottom:1px solid #00eaff;
+}
+
+header h2{
+    color:#00eaff;
+    letter-spacing:4px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:30px;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:#00eaff;
+}
+
+
+/* Efeito de brilho no fundo */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+
+    background:
+        radial-gradient(circle at 20% 30%, rgba(0,255,255,.15), transparent 25%),
+        radial-gradient(circle at 80% 60%, rgba(0,150,255,.12), transparent 30%),
+        radial-gradient(circle at 50% 90%, rgba(0,255,180,.10), transparent 25%);
+
+    pointer-events:none;
+    z-index:-1;
+}
+
+.cabecalho{
+    text-align:center;
+    padding:50px 20px;
+}
+
+.cabecalho h1{
+    font-size:60px;
+    letter-spacing:5px;
+    color:#00eaff;
+    text-shadow:0 0 20px #00eaff;
+}
+
+.cabecalho p{
+    font-size:22px;
+    color:#b8eaff;
+}
+
+.galeria{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+    padding:30px;
+}
+
+.personagem{
+    width:280px;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(0,255,255,0.3);
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.4s;
+    backdrop-filter:blur(5px);
+}
+
+.personagem:hover{
+    transform:translateY(-10px) scale(1.03);
+    box-shadow:0 0 25px rgba(0,255,255,0.6);
+}
+
+.personagem img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+}
+
+.personagem h2{
+    text-align:center;
+    color:#00eaff;
+}
+
+.personagem p{
+    text-align:center;
+    padding:0 15px 20px;
+}
